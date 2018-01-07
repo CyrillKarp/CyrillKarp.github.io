@@ -4,6 +4,7 @@ body {
     font-size: 16px;
     color: #455A64;
     font-weight: 400;
+    min-width: 320px;
     margin: 0;
 }
 a,
@@ -19,7 +20,6 @@ section {
     position: relative;
 }
 .container {
-    width: 100%;
     max-width: 65%;
     margin: 0 auto;
 }
@@ -664,5 +664,13 @@ textarea:focus + label {
     }
     .menu-icon {
         right: 90px;
+    }
+    .about-left-col {
+        display: none;
+    }
+    form {
+        padding: 0;
+        margin: 0;
+        width: 280px;
     }
 }
