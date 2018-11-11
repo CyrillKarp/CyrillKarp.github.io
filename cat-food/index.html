@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>my-project-funbox</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bundle.min.css" type="text/css">
+    <script src="https://unpkg.com/vue"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section class="main">
+        <h1 class="main__header">Ты сегодня покормил кота?</h1>
+        <div class="main__products view-port" id="app" >
+            <div class="product-item">
+                <div class="product-card" 
+                    v-on:click="selected1 = !selected1"
+                    v-bind:class="{'product-card_selected': selected1}">
+                    <p class="product-card__header">
+                        Сказочное заморское яство
+                    </p>
+                    <p class="product-card__name">Нямушка</p>
+                    <p class="product-card__taste">с фуа-гра</p>
+                    <p class="product-card__description">10 порций<br>мышь в подарок</p>
+                    <img class="product-card__img" src="img/cat.png" alt="cat">
+                    <div class="product-card__amount" 
+                       v-bind:class="{'product-card__amount_selected': selected1}">
+                        <span>0,5</span>
+                        <span>кг</span>
+                    </div>
+                </div>
+                <div class="product-item__footer" v-html="footerText1" v-on:click.prevent = "selected1 = !selected1"></div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-card" 
+                    v-on:click="selected2 = !selected2"
+                    v-bind:class="{'product-card_selected': selected2}">
+                    <p class="product-card__header" data-hover="Котэ не одобряет?">
+                        Сказочное заморское яство
+                    </p>
+                    <p class="product-card__name">Нямушка</p>
+                    <p class="product-card__taste">с рыбой</p>
+                    <p class="product-card__description">40 порций<br>2 мыши в подарок</p>
+                    <img class="product-card__img" src="img/cat.png" alt="cat">
+                    <div class="product-card__amount"
+                       v-bind:class="{'product-card__amount_selected': selected2}">
+                        <span>2</span>
+                        <span>кг</span>
+                    </div>
+                </div>
+                <div class="product-item__footer" v-html="footerText2" v-on:click.prevent = "selected2 = !selected2"></div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-card product-card_disabled">
+                    <p class="product-card__header product-card__header_disabled" data-hover="Котэ не одобряет?">
+                        Сказочное заморское яство
+                    </p>
+                    <p class="product-card__name product-card__name_disabled">Нямушка</p>
+                    <p class="product-card__taste product-card__taste_disabled">с курой</p>
+                    <p class="product-card__description product-card__description_disabled">100 порций<br>5 мышей в подарок<br>заказчик доволен</p>
+                    <img class="product-card__img product-card__img_disabled" src="img/cat.png" alt="cat">
+                    <div class="product-card__amount product-card__amount_disabled">
+                        <span>5</span>
+                        <span>кг</span>
+                    </div>
+                </div>
+                <div class="product-item__footer product-item__footer_out-of-stock">Печалька, с курой закончился.</div>
+            </div>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
