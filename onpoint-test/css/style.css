@@ -1,0 +1,269 @@
+/*----------fonts----------*/
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../fonts/Lato-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Lato Medium';
+    src: url('../fonts/Lato-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Lato Semibold';
+    src: url('Lato-SemiboldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('Lato-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gotham Pro Light';
+    src: url('../fonts/GothamPro-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gotham Pro Medium';
+    src: url('../fonts/GothamPro-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('../fonts/GothamPro.woff') format('woff');
+}
+/*----------main styles----------*/
+h1 {
+    font-weight: normal;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-family: 'Gotham Pro Regular';
+}
+.section {
+    text-align: center;
+    height: 768px;
+    margin: 0 auto;
+    font-size: 1em;
+    color: #fff;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*----------first section----------*/
+.section__first {
+    background: url(../img/bg_1.jpg) center no-repeat;
+    color: #123ba3;
+    background-image: 
+}
+
+.section__first .section__header {
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    margin-left: 100px;
+    color: #123ba3;
+}
+.section-first__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*peaks on the first section*/
+.peak-1 {
+    position: absolute;
+    top: 260px;
+    left: 650px;
+}
+.circle-1 {
+    width:20px;
+    height:20px;
+    top: -45px;
+    left: -70px;
+}
+.peak-2 {
+    position: absolute;
+    top: 370px;
+    left: 230px;
+}
+.circle-2 {
+    width:15px;
+    height:15px;
+    top: 0;
+    left: 50px;
+}
+.peak-3 {
+    position: absolute;
+    top: 480px;
+    left: 410px;
+}
+.circle-3 {
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 70px;
+}
+.peak-4 {
+    position: absolute;
+    top: 465px;
+    left: 800px;
+}
+.circle-4 {
+    width:10px;
+    height:10px;
+    top: 0;
+    left: 23px;
+}
+.peak__descr {
+    font-family: 'Lato Medium';
+    font-size: 20px;
+}
+
+/*----------pulsating circles in first-section----------*/
+.circle {
+    position: relative;
+    border-radius:50%;
+    background: rgba(222, 121, 27, 0.7);
+    box-shadow: 0 0 0 10px rgba(224, 150, 80, 0.5);
+}
+.circle:before,
+.circle:after, 
+.circle__inner {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(222, 116, 34, 1);
+    animation: glow-grow 2s ease-out infinite;
+}
+.circle:after {
+    animation-delay: .66s;
+}
+.circle__inner {
+    animation-delay: 1.33s;
+}
+@keyframes glow-grow {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/*second section*/
+.section__second {
+    background: url(../img/bg_2.jpg) center no-repeat;
+}
+.section__second .section__header{
+    margin-bottom: 200px;
+}
+.section__header {
+    color: #fff;
+    font-family: 'Gotham Pro Regular';
+    font-size: 50px;
+}
+
+/*third section*/
+.section__third {
+    background: url(../img/bg_3.jpg) center no-repeat;
+}
+.section__third .slide {
+    width: 100%;
+}
+.slide1 {
+    background: url(../img/slide_1.png) center no-repeat;
+}
+.slide2 {
+    background: url(../img/slide_2.png) center no-repeat;
+}
+.slide3 {
+    background: url(../img/slide_3.png) center no-repeat;
+}
+
+/*---------go to page down---------*/
+.page-down {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../img/next.png) top;
+    background-position: 0 72px;
+}
+
+.page-down__text {
+    color: #fff;
+    font-family: 'Gotham Pro Regular';
+    font-size: 15px;
+    padding: 10px 0;
+    margin: 0;
+}
+.page-down__arrow {
+    top: 100px;
+    padding-bottom: 10px;
+}
+
+/*slider*/
+.slider {
+    position: absolute;
+	display: block; 
+	width: 100%;
+    height: 100px;
+	text-align: center;
+	bottom: 10px;
+    z-index: 999;
+}
+.years {
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	font-size: 20px;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+input[type=range] {
+	-webkit-appearance: none;
+	width: 70%;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 50px;
+	width: 50px;
+	background-image: url(../img/polygon.png);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: -18px;
+    z-index: 100;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 10px;
+	cursor: pointer;
+	background:  rgb(209, 234, 255);
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 25px;
+	cursor: pointer;
+	background:  rgb(209, 234, 255);
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 25px;
+	cursor: pointer;
+	background: transparent;
+	color: transparent;
+}
